@@ -1,0 +1,20 @@
+2024-03-19 23:43:42,719 - INFO - Logging configured.
+2024-03-19 23:43:42,722 - INFO - Found plugin: calculator
+2024-03-19 23:43:42,726 - INFO - Registered command: calculator
+2024-03-19 23:43:42,726 - INFO - Found plugin: exit
+2024-03-19 23:43:42,726 - INFO - Registered command: exit
+2024-03-19 23:43:42,726 - INFO - Found plugin: goodbye
+2024-03-19 23:43:42,727 - INFO - Registered command: goodbye
+2024-03-19 23:43:42,727 - INFO - Found plugin: greet
+2024-03-19 23:43:42,727 - INFO - Registered command: greet
+2024-03-19 23:43:42,727 - INFO - Found plugin: menu
+2024-03-19 23:43:42,727 - INFO - Found plugin: openai
+2024-03-19 23:43:42,728 - INFO - Registered command: openai
+2024-03-19 23:43:42,728 - INFO - Application starting...
+2024-03-19 23:43:46,927 - INFO - Executing calculator operation: Add
+2024-03-19 23:43:46,927 - INFO - Executing Add command.
+2024-03-19 23:43:48,047 - INFO - Addition result: 2.0
+2024-03-19 23:43:50,244 - INFO - User selected to go back from CalculatorCommand.
+2024-03-19 23:43:52,797 - INFO - Displaying main menu to user.
+2024-03-19 23:43:55,117 - INFO - User selected command: exit
+2024-03-19 23:43:55,117 - INFO - Executing ExitCommand - Application exiting...

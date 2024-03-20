@@ -1,4 +1,5 @@
 import sys
+import logging
 from app.commands import Command, CommandHandler
 
 class MenuCommand(Command):
@@ -13,13 +14,19 @@ class MenuCommand(Command):
             print(f"{index}. {command_name.capitalize()}")
         print("Enter the number of the command to execute, or '0' to exit.")
 
+        logging.info("Displaying main menu to user.")  # Log displaying the menu
+
         try:
             selection = int(input("Selection: "))
             if selection == 0:
+                logging.info("User selected to exit the program.")  # Log user's decision to exit
                 sys.exit("Exiting program.")  # Gracefully exit if the user selects '0'
             command_name = commands[selection - 1]  # Adjust for zero-based indexing
+            logging.info(f"User selected command: {command_name}")  # Log the command selected by the user
             self.command_handler.execute_command(command_name)
         except (ValueError, IndexError):
-            print("Invalid selection. Please enter a valid number.")
+            logging.warning("User made an invalid selection.")  # Log invalid selection
+            print("Invalid selection. Please enter a valid number.")  # User feedback
         except KeyError:
-            print("Selected command could not be executed.")
+            logging.error("Attempted to execute a non-existent command.")  # Log error
+            print("Selected command could not be executed.")  # User feedback

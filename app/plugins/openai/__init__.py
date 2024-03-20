@@ -1,6 +1,6 @@
-
 import pkgutil
 import importlib
+import logging
 from app.commands import Command
 
 class OpenAICommand(Command):
@@ -24,25 +24,32 @@ class OpenAICommand(Command):
                     if issubclass(attribute, Command) and attribute is not Command:
                         # Use numeric keys for operations based on their sorted order
                         operations[str(index)] = attribute()
+                logging.info(f"Loaded OpenAI plugin: {name}")
             except (ImportError, TypeError) as e:
-                print(f"Error loading plugin {name}: {e}")
+                if str(e) == "issubclass() arg 1 must be a class":
+                    continue  # Ignore this specific TypeError
+                else:
+                    logging.error(f"Error loading OpenAI plugin {name}: {e}")
+                    print(f"Error loading plugin {name}: {e}")  # Retain print for user feedback
+                    raise
         return operations
+
     def execute(self):
         while True:
             print("OPEN AI Operations:")
-            # Sorted ensures the display is in numeric order
             for key in sorted(self.operations.keys(), key=int):
                 print(f"{key}. {self.operations[key].__class__.__name__}")
             print("0. Back")
 
             choice = input("Select an operation: ")
             if choice == '0':
+                logging.info("User selected to go back from OpenAICommand.")
                 break  # Exit to the main menu
 
             operation = self.operations.get(choice)
             if operation:
+                logging.info(f"Executing OpenAI operation: {operation.__class__.__name__}")
                 operation.execute()
             else:
+                logging.warning("Invalid selection in OpenAICommand.")
                 print("Invalid selection. Please try again.")
-
-
