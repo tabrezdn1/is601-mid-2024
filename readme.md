@@ -4,6 +4,12 @@
 This is an advanced Python-based calculator application. This application integrates clean, maintainable code, the application of design patterns, comprehensive logging, dynamic configuration via environment variables, sophisticated data handling with Pandas, and a command-line interface (REPL) for real-time user interaction.
 
 ## Functionalities Implemented
+### Running the app with `python main.py` command.
+
+![alt text](images/commands/all.png)
+
+For detail description of all the commands showcased above: Please [View the document](docs/commands.md)
+
 ### Command-Line Interface (REPL)
 Implemented a Read-Eval-Print Loop (REPL) to facilitate direct interaction with the calculator, history and openAI command.
 - Execution of arithmetic operations (Add, Subtract, Multiply, and Divide) are supported for calculator.
