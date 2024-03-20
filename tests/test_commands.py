@@ -1,52 +1,63 @@
 from app.commands import Command
 import pytest
 from app import App
-from app.plugins.goodbye import GoodbyeCommand
-from app.plugins.greet import GreetCommand
-
-
-def test_app_greet_command(capfd, monkeypatch):
-    """Test that the REPL correctly handles the 'greet' command."""
-    # Assuming '4' is the index for the 'greet' command based on the error output
-    inputs = iter(['4', 'exit'])
-    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
-    app = App()
-    app.start()
-
-    # Capture and assert the expected output
-    captured = capfd.readouterr()
-    # Adjust the assertion based on the actual expected output of 'greet'
-    assert "Hello, World!" in captured.out
-
-
-
-def test_app_menu_command(capfd, monkeypatch):
-    """Test that the REPL correctly handles the 'menu' command."""
-    # Simulate user entering 'menu' followed by 'exit'
-    inputs = iter(['menu', 'exit'])
-    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-
-    app = App()
-    app.start()  # Start the application without expecting SystemExit
-
-    # Capture and assert the expected output
-    captured = capfd.readouterr()
-    # Assert that the menu was displayed
-    # This depends on what output 'menu' command produces; for example:
-    assert "Available commands:" in captured.out
-
 from unittest.mock import MagicMock
 from app.plugins.calculator import CalculatorCommand
+import sys
+from app.commands import CommandHandler
+from app.plugins.menu import MenuCommand
+from app.plugins.openai import OpenAICommand
+import logging
+
+def test_app_greet_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'greet' command and its logging."""
+    inputs = iter(['6', 'exit'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        app.start()
+
+        # Capture and assert the expected output
+        captured = capfd.readouterr()
+        assert "Hello, World!" in captured.out
+
+        # Now, check the log messages
+        assert "Executing GreetCommand." in caplog.text
+        assert "GreetCommand executed successfully." in caplog.text
+
+
+
+
+def test_app_menu_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'menu' command and its logging."""
+    inputs = iter(['8','0','exit'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        try:
+            app.start()  # Start the application without expecting SystemExit
+
+            # Capture and assert the expected output
+            captured = capfd.readouterr()
+            assert "Available commands:" in captured.out
+            # Assert that the menu display was logged
+            assert "Displaying main menu to user." in caplog.text
+
+            # Since the user selects 'exit', which is simulated by input, check the log for exit confirmation
+            assert "User selected to exit the program." in caplog.text
+        except SystemExit as e:
+            assert str(e) == "Exiting program."
 
 # Mock operation classes
 class MockAddCommand(Command):
     def execute(self):
-        print("Performing addition")
+        logging.info("Performing addition")
 
 class MockSubtractCommand(Command):
     def execute(self):
-        print("Performing subtraction")
+        logging.info("Performing subtraction")
 
 @pytest.fixture
 def mock_operations(monkeypatch):
@@ -83,10 +94,6 @@ def test_calculator_execute_operation(capfd, monkeypatch):
     # Adjust the assertion to match the actual expected result output
     assert "The result is 5.0" in captured.out
 
-from unittest.mock import MagicMock
-import sys
-from app.commands import CommandHandler
-from app.plugins.menu import MenuCommand
 
 # Mock commands to register with the CommandHandler
 class MockCommand(Command):
@@ -130,10 +137,6 @@ def test_menu_command_invalid_selection(capfd, monkeypatch, command_handler_with
     captured = capfd.readouterr()
     assert "Invalid selection. Please enter a valid number." in captured.out
 
-import pytest
-from unittest.mock import MagicMock
-from app.commands import Command
-from app.plugins.openai import OpenAICommand
 
 # Mock OpenAI operations
 class MockChatCommand(Command):
