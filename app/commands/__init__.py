@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+import pandas as pd
+from datetime import datetime
+import os
 
 class Command(ABC):
     @abstractmethod
@@ -38,13 +41,33 @@ class Singleton(type):
 
 class CommandHistoryManager(metaclass=Singleton):
     def __init__(self):
-        self.history = []
+        self.history_file = 'data/command_history.csv'
+        # Load history if exists, otherwise initialize an empty DataFrame
+        if os.path.exists(self.history_file):
+            self.history = pd.read_csv(self.history_file)
+        else:
+            self.history = pd.DataFrame(columns=['Timestamp', 'Command'])
 
     def add_command(self, command_name):
-        self.history.append(command_name)
+        now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        new_entry = pd.DataFrame([[now, command_name]], columns=['Timestamp', 'Command'])
+        self.history = pd.concat([self.history, new_entry], ignore_index=True).tail(5)
+        self.save_history()
 
     def get_history(self):
-        return self.history
+        # Return a list of command names for backward compatibility
+        return self.history['Command'].tolist()
 
     def clear_history(self):
-        self.history.clear()
+        self.history = pd.DataFrame(columns=['Timestamp', 'Command'])
+        self.save_history()
+
+    def save_history(self):
+        """Saves the current command history to a CSV file."""
+        self.history.to_csv(self.history_file, index=False)
+
+    def load_history(self):
+        """Loads the command history from a CSV file into a DataFrame."""
+        if os.path.exists(self.history_file):
+            return pd.read_csv(self.history_file)
+        return pd.DataFrame(columns=['Timestamp', 'Command'])
