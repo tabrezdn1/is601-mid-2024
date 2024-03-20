@@ -1,13 +1,14 @@
-from app.commands import Command
+"""Test all the commands of the app"""
+import logging
+import sys
+from unittest.mock import MagicMock
 import pytest
 from app import App
-from unittest.mock import MagicMock
+
+from app.commands import Command, CommandHandler
 from app.plugins.calculator import CalculatorCommand
-import sys
-from app.commands import CommandHandler
 from app.plugins.menu import MenuCommand
 from app.plugins.openai import OpenAICommand
-import logging
 
 def test_app_greet_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'greet' command and its logging."""
@@ -25,9 +26,6 @@ def test_app_greet_command(capfd, monkeypatch, caplog):
         # Now, check the log messages
         assert "Executing GreetCommand." in caplog.text
         assert "GreetCommand executed successfully." in caplog.text
-
-
-
 
 def test_app_menu_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'menu' command and its logging."""
@@ -52,22 +50,24 @@ def test_app_menu_command(capfd, monkeypatch, caplog):
 
 # Mock operation classes
 class MockAddCommand(Command):
+    """Class mocker for performing addition"""
     def execute(self):
         logging.info("Performing addition")
 
 class MockSubtractCommand(Command):
+    """Class mocker for performing subtraction"""
     def execute(self):
         logging.info("Performing subtraction")
 
 @pytest.fixture
 def mock_operations(monkeypatch):
-    # Mock the load_operations method to return a fixed set of operations
+    """Mock the load_operations method to return a fixed set of operations"""
     def mock_load_operations(self):
         return {'1': MockAddCommand(), '2': MockSubtractCommand()}
     monkeypatch.setattr(CalculatorCommand, "load_operations", mock_load_operations)
 
 def test_calculator_display_operations_and_exit(capfd, monkeypatch, mock_operations):
-    # Simulate user selecting '0' to exit the operations menu
+    """Simulate user selecting '0' to exit the operations menu"""
     monkeypatch.setattr('builtins.input', lambda _: '0')
     calculator_cmd = CalculatorCommand()
     calculator_cmd.execute()
@@ -82,7 +82,7 @@ def test_calculator_display_operations_and_exit(capfd, monkeypatch, mock_operati
 # monkeypatch.setattr('builtins.input', lambda _: next(inputs, 'default_value'))
 
 def test_calculator_execute_operation(capfd, monkeypatch):
-    # Simulate user selecting an operation ('1'), entering two numbers, and then choosing to exit ('0')
+    """Simulate user selecting an operation ('1'), entering two numbers, and then choosing to exit ('0')"""
     inputs = ['1', '2', '3', '0']  # Example: '1' to select the first operation, '2' and '3' as operands, '0' to exit
     input_generator = (input for input in inputs)
     monkeypatch.setattr('builtins.input', lambda _: next(input_generator))
@@ -93,27 +93,25 @@ def test_calculator_execute_operation(capfd, monkeypatch):
     captured = capfd.readouterr()
     # Adjust the assertion to match the actual expected result output
     assert "The result is 5.0" in captured.out
-
-
-# Mock commands to register with the CommandHandler
 class MockCommand(Command):
+    """Mock commands to register with the CommandHandler"""
     def execute(self):
         print("Mock command executed.")
 
 @pytest.fixture
 def command_handler_with_commands():
+    """pytest fixtures"""
     handler = CommandHandler()
     handler.register_command('test', MockCommand())
     handler.register_command('help', MockCommand())
     return handler
 
 def test_menu_command_display_and_exit(capfd, monkeypatch, command_handler_with_commands):
-    # Mock input to select '0' and exit
+    """Mock input to select '0' and exit"""
     monkeypatch.setattr('builtins.input', lambda _: '0')
     # Mock sys.exit to prevent the test from exiting
     mock_exit = MagicMock()
     monkeypatch.setattr(sys, 'exit', mock_exit)
-    
     menu_cmd = MenuCommand(command_handler_with_commands)
     menu_cmd.execute()
 
@@ -125,7 +123,7 @@ def test_menu_command_display_and_exit(capfd, monkeypatch, command_handler_with_
     mock_exit.assert_called_once_with("Exiting program.")  # Verify sys.exit was called
 
 def test_menu_command_invalid_selection(capfd, monkeypatch, command_handler_with_commands):
-    # Simulate an invalid selection followed by exit
+    """Simulate an invalid selection followed by exit"""
     inputs = iter(['999', '0'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     # Mock sys.exit to prevent the test from exiting
@@ -137,22 +135,21 @@ def test_menu_command_invalid_selection(capfd, monkeypatch, command_handler_with
     captured = capfd.readouterr()
     assert "Invalid selection. Please enter a valid number." in captured.out
 
-
-# Mock OpenAI operations
 class MockChatCommand(Command):
+    """Mock OpenAI operations"""
     def execute(self):
         print("Chat operation executed.")
 
 @pytest.fixture
 def openai_command_with_operations(monkeypatch):
-    # Mock the load_operations method to return a set of mock operations
+    """Mock the load_operations method to return a set of mock operations"""
     def mock_load_operations(self):
         return {'1': MockChatCommand()}
     monkeypatch.setattr(OpenAICommand, "load_operations", mock_load_operations)
     return OpenAICommand()
 
 def test_openai_command_display_and_exit(capfd, monkeypatch, openai_command_with_operations):
-    # Simulate user selecting '0' to exit
+    """Simulate user selecting '0' to exit"""
     monkeypatch.setattr('builtins.input', lambda _: '0')
     openai_command_with_operations.execute()
 
@@ -162,7 +159,7 @@ def test_openai_command_display_and_exit(capfd, monkeypatch, openai_command_with
     assert "0. Back" in captured.out
 
 def test_openai_command_execute_operation(capfd, monkeypatch, openai_command_with_operations):
-    # Simulate user selecting operation '1' and then exiting with '0'
+    """Simulate user selecting operation '1' and then exiting with '0'"""
     inputs = ['1', '0']
     input_generator = (input for input in inputs)
     monkeypatch.setattr('builtins.input', lambda _: next(input_generator))
