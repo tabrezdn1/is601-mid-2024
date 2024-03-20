@@ -6,11 +6,12 @@ import pandas as pd
 import pytest
 from app import App
 
-from app.commands import Command, CommandHandler
+from app.commands import Command, CommandHandler, CommandHistoryManager
 from app.plugins.calculator import CalculatorCommand
 from app.plugins.csv import CsvCommand
+from app.plugins.history import HistoryCommand
 from app.plugins.menu import MenuCommand
-from app.plugins.openai import OpenAICommand
+from app.plugins.openai import OpenAICommand, chat
 
 def test_app_greet_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'greet' command and its logging."""
@@ -234,3 +235,127 @@ def test_csv_command(capfd, tmpdir, caplog):
 
         # Clean up
         data_dir.remove()
+
+def test_app_divide_command_success(capfd, monkeypatch, caplog):
+    """Test successful division."""
+    inputs = iter(['1', '2', '2', '2', '0', 'exit'])  # Simulate user inputs for the numbers and exiting
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        app.start()
+
+        # Capture and assert the expected output for successful division
+        captured = capfd.readouterr()
+        assert "The result is 1.0" in captured.out
+
+        # Check the log messages for successful execution
+        assert "Executing Divide command." in caplog.text
+        assert "Division result: 1.0" in caplog.text
+
+def test_app_divide_command_zero_division(capfd, monkeypatch, caplog):
+    """Test division by zero scenario."""
+    # Ensure the sequence of inputs matches the expected application flow.
+    # The addition of 'exit' at the end ensures the application loop can terminate gracefully.
+    inputs = iter(['1', '2', '10', '0', '0', 'exit'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.WARNING):
+        app = App()
+        app.start()
+
+        captured = capfd.readouterr()
+        assert "Cannot divide by zero. Please enter a valid second number." in captured.out or "Invalid selection. Please enter a valid number." in captured.err
+
+def test_app_multiply_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'multiply' command and its logging."""
+    # Assuming '3' selects the Multiply command in your command list, followed by the numbers to multiply
+    inputs = iter(['1', '3', '5', '4', '0', 'exit'])  # Adjust '3' if the position of Multiply command differs
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        app.start()
+
+        # Capture and assert the expected output
+        captured = capfd.readouterr()
+        assert "The result is 20.0" in captured.out
+
+        # Now, check the log messages
+        assert "Executing Multiply command." in caplog.text
+        assert "Multiplication result: 20.0" in caplog.text
+
+def test_app_subtract_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'subtract' command and its logging."""
+    # Assuming '4' selects the Subtract command in your command list, followed by the numbers to subtract
+    inputs = iter(['1', '4', '10', '3', '0', 'exit'])  # Adjust '4' if the position of Subtract command differs
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        app.start()
+
+        # Capture and assert the expected output for subtraction
+        captured = capfd.readouterr()
+        assert "The result is 7.0" in captured.out
+
+        # Now, check the log messages for the execution of the Subtract command
+        assert "Executing Subtract command." in caplog.text
+        assert "Subtraction result: 7.0" in caplog.text
+
+def test_app_goodbye_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'goodbye' command and its logging."""
+    # Assuming '5' selects the GoodbyeCommand in your command list, followed by an 'exit' command
+    inputs = iter(['4', '0', 'exit'])  # Adjust '5' if the position of GoodbyeCommand differs
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        app.start()
+
+        # Capture and assert the expected output for goodbye
+        captured = capfd.readouterr()
+        assert "Goodbye" in captured.out
+
+        # Now, check the log messages for the execution of the GoodbyeCommand
+        assert "Executing GoodbyeCommand." in caplog.text
+        assert "GoodbyeCommand executed successfully." in caplog.text
+
+# Assuming the HistoryCommand and CommandHistoryManager are defined as above
+
+def test_app_history_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'history' command and displays command history."""
+    # Setup the command history
+    command_history_manager = CommandHistoryManager()
+    command_history_manager.add_command("greet")
+    command_history_manager.add_command("exit")
+
+    # Execute the HistoryCommand
+    history_command = HistoryCommand()
+    history_command.execute()
+
+    # Capture and assert the expected output for the history command
+    captured = capfd.readouterr()
+    expected_output_lines = ["Command History:", "greet", "exit"]
+    for expected_line in expected_output_lines:
+        assert expected_line in captured.out
+
+    # Optionally, verify that no unexpected log messages are generated
+    assert not caplog.records
+
+def test_app_chat_command(capfd, monkeypatch, caplog):
+    """Test that the REPL correctly handles the 'chat' command and its logging."""
+    # Assuming '2' selects the Chat command in your command list
+    inputs = iter(['7', '1', '0', 'exit'])  # Adjust '2' if the position of Chat command differs
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    with caplog.at_level(logging.INFO):
+        app = App()
+        app.start()
+
+        # Capture and assert the expected output for the chat command
+        captured = capfd.readouterr()
+        assert "Hi this is AI" in captured.out
+
+        # Now, check the log messages for the execution of the Chat command
+        assert "Chat command executed: Engaging with AI." in caplog.text
