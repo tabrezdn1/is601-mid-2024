@@ -11,7 +11,7 @@ import logging
 
 def test_app_greet_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'greet' command and its logging."""
-    inputs = iter(['6', 'exit'])
+    inputs = iter(['4', 'exit'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
 
     with caplog.at_level(logging.INFO):
@@ -31,7 +31,7 @@ def test_app_greet_command(capfd, monkeypatch, caplog):
 
 def test_app_menu_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'menu' command and its logging."""
-    inputs = iter(['8','0','exit'])
+    inputs = iter(['6','0','exit'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
 
     with caplog.at_level(logging.INFO):
