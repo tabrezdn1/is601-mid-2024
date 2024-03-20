@@ -321,27 +321,36 @@ def test_app_goodbye_command(capfd, monkeypatch, caplog):
         assert "Executing GoodbyeCommand." in caplog.text
         assert "GoodbyeCommand executed successfully." in caplog.text
 
-# Assuming the HistoryCommand and CommandHistoryManager are defined as above
+@pytest.fixture
+def mock_command_history_manager():
+    """Mock history manager"""
+    with patch('app.commands.CommandHistoryManager', autospec=True) as mock:
+        # Setup mock to return a predefined history
+        mock.return_value.get_history.return_value = ['greet', 'exit']
+        yield mock
 
-def test_app_history_command(capfd, monkeypatch, caplog):
-    """Test that the REPL correctly handles the 'history' command and displays command history."""
-    # Setup the command history
-    command_history_manager = CommandHistoryManager()
-    command_history_manager.add_command("greet")
-    command_history_manager.add_command("exit")
+def test_app_history_command_operations(mock_command_history_manager, capfd, caplog):
+    """Test history command in REPL"""
+    # Setup the input values for the test to simulate user selecting 'Load History' and then 'Back'
+    with patch('builtins.input', side_effect=['6', '1', '0']):
+        history_command = HistoryCommand()
+        history_command.execute()
 
-    # Execute the HistoryCommand
-    history_command = HistoryCommand()
-    history_command.execute()
-
-    # Capture and assert the expected output for the history command
+    # Capture and assert the expected output for loading the history
     captured = capfd.readouterr()
-    expected_output_lines = ["Command History:", "greet", "exit"]
+    expected_output_lines = ["Command History Operations:", "1. Load History", "2. Save History", "3. Clear History", "4. Delete History Record"]
     for expected_line in expected_output_lines:
         assert expected_line in captured.out
 
-    # Optionally, verify that no unexpected log messages are generated
-    assert not caplog.records
+    # Test 'Clear History' operation by simulating user input
+    with patch('builtins.input', side_effect=['3', '0', 'exit']):
+        with patch.object(CommandHistoryManager, 'clear_history', autospec=True) as mock_clear_history:
+            history_command.execute()
+            mock_clear_history.assert_called_once()
+
+    # Capture output to check clear history operation confirmation
+    captured = capfd.readouterr()
+    assert "History cleared successfully." in captured.out
 
 def test_app_chat_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'chat' command and its logging."""

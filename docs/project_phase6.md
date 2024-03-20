@@ -5,7 +5,7 @@ This phase focuses on adding data related operations and also implementing any f
 
 ## Added features to project as part of this phase:
 1. New command - history
-- Every command is stored into history, and as this will only have one instance, therefore using Singleton Design Pattern is a right choice.
+- Every command is stored into history state, and as this will only have one instance, therefore using Singleton Design Pattern is a right choice. This history is again a sub menu command with operation like LOAD, CLEAR, SAVE and DELETE a particular command, that gets recorded in history. All this history also gets added to a csv file using pandas when the operations(menu options) are executed.
 2. New command - csv
 - Applying the concept of data structures and using pandas and numpy, CSV command basically reads a csv file and sorts the data and creates a new file and saves it. (Here in this case we have data of few US states and we sort this data based on population and generate a new file, the sorting is in ascending order).
 
