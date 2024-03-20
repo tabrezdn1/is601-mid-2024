@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 import pandas as pd
 from datetime import datetime
 import os
+from util.constants import MAX_HISTORY_RECORDS
 
 class Command(ABC):
     @abstractmethod
@@ -41,21 +42,19 @@ class Singleton(type):
         return cls._instances[cls]
 
 class CommandHistoryManager(metaclass=Singleton):
-    MAX_HISTORY_RECORDS = 5  # Limit to the last 5 commands
-
     def __init__(self):
         self.history_file = 'data/command_history.csv'
         if os.path.exists(self.history_file):
             self.history = pd.read_csv(self.history_file)
             # Ensure that only the latest MAX_HISTORY_RECORDS are loaded
-            self.history = self.history.tail(self.MAX_HISTORY_RECORDS)
+            self.history = self.history.tail(MAX_HISTORY_RECORDS)
         else:
             self.history = pd.DataFrame(columns=['Timestamp', 'Command'])
 
     def add_command(self, command_name):
         now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         new_entry = pd.DataFrame([[now, command_name]], columns=['Timestamp', 'Command'])
-        self.history = pd.concat([self.history, new_entry], ignore_index=True).tail(self.MAX_HISTORY_RECORDS)
+        self.history = pd.concat([self.history, new_entry], ignore_index=True).tail(MAX_HISTORY_RECORDS)
         self.save_history()
 
     def get_history(self):

@@ -1,0 +1,1 @@
+MAX_HISTORY_RECORDS = 5  # Limit to the last 5 commands
