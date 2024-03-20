@@ -1,18 +1,20 @@
 """Test all the commands of the app"""
 import logging
 import sys
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
+import pandas as pd
 import pytest
 from app import App
 
 from app.commands import Command, CommandHandler
 from app.plugins.calculator import CalculatorCommand
+from app.plugins.csv import CsvCommand
 from app.plugins.menu import MenuCommand
 from app.plugins.openai import OpenAICommand
 
 def test_app_greet_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'greet' command and its logging."""
-    inputs = iter(['4', 'exit'])
+    inputs = iter(['5', 'exit'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
 
     with caplog.at_level(logging.INFO):
@@ -29,7 +31,7 @@ def test_app_greet_command(capfd, monkeypatch, caplog):
 
 def test_app_menu_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'menu' command and its logging."""
-    inputs = iter(['7','0','exit'])
+    inputs = iter(['8','0','exit'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
 
     with caplog.at_level(logging.INFO):
@@ -168,3 +170,67 @@ def test_openai_command_execute_operation(capfd, monkeypatch, openai_command_wit
 
     captured = capfd.readouterr()
     assert "Chat operation executed." in captured.out
+
+def test_csv_command(capfd, tmpdir, caplog):
+    """Test that the CsvCommand correctly handles reading, sorting, and reducing a CSV file."""
+    with patch('os.path.exists', return_value=False), patch('os.makedirs'):
+        # your test code here
+        # Setup a temporary directory and CSV file for the test
+        data_dir = tmpdir.mkdir("data")
+        input_file_path = data_dir.join("gpt_states.csv")
+        output_file_path = data_dir.join("sorted_states.csv")
+
+        # Sample data to write to the input CSV file
+        sample_data = {
+            "State Abbreviation": [
+                "CA", "NJ", "TX", "FL", "IL", "NY", "PA", "OH", "MI", "GA", 
+                "NC", "VA", "WA", "MA", "AZ", "MN", "MO", "CO", "WI", "OR"
+            ],
+            "State Name": [
+                "California", "New Jersey", "Texas", "Florida", "Illinois", "New York", "Pennsylvania", 
+                "Ohio", "Michigan", "Georgia", "North Carolina", "Virginia", "Washington", "Massachusetts", 
+                "Arizona", "Minnesota", "Missouri", "Colorado", "Wisconsin", "Oregon"
+            ],
+            "Population": [
+                39538223, 8882190, 29145505, 21538187, 12671821, 20201249, 12801989,
+                11799448, 10077331, 10711908, 10488084, 8631393, 7693612, 7029917,
+                7151502, 5700671, 6154913, 5773714, 5893718, 4237256
+            ],
+            "Capital": [
+                "Sacramento", "Trenton", "Austin", "Tallahassee", "Springfield", "Albany", "Harrisburg", 
+                "Columbus", "Lansing", "Atlanta", "Raleigh", "Richmond", "Olympia", "Boston", 
+                "Phoenix", "St. Paul", "Jefferson City", "Denver", "Madison", "Salem"
+            ],
+            "GDP": [
+                "3.1T", "0.6T", "1.9T", "1.1T", "0.9T", "1.7T", "0.8T", "0.7T", "0.5T", "0.6T", 
+                "0.6T", "0.5T", "0.6T", "0.8T", "0.4T", "0.4T", "0.3T", "0.4T", "0.3T", "0.3T"
+            ]
+        }
+
+        df = pd.DataFrame(sample_data)
+        df.to_csv(input_file_path, index=False)
+
+        # Mock the CsvCommand to use the temporary directory and files
+        csv_command = CsvCommand()
+        csv_command._CsvCommand__data_dir = str(data_dir)  # Override private attributes
+        csv_command._CsvCommand__input_file_path = str(input_file_path)
+        csv_command._CsvCommand__output_file_path = str(output_file_path)
+        csv_command._CsvCommand__sort_by = 'Population'
+        csv_command._CsvCommand__columns_to_keep = ['State Abbreviation', 'State Name', 'Population']
+
+        with caplog.at_level(logging.INFO):
+            csv_command.execute()
+
+        # Capture and assert the expected output
+        captured = capfd.readouterr()
+        assert "Processed data saved to" in captured.out
+        assert "States from CSV, sorted by Population" in captured.out
+        assert "CA: California" in captured.out  # Check for a sorted entry
+
+        # Now, check the log messages
+        assert "The directory" in caplog.text
+        assert "Processed data saved to" in caplog.text
+        assert "Record 0: OR: Oregon" in caplog.text
+
+        # Clean up
+        data_dir.remove()

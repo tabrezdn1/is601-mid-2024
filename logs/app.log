@@ -53,3 +53,529 @@
 2024-03-20 00:34:14,999 - INFO - Registered command: openai
 2024-03-20 00:34:14,999 - INFO - Application starting...
 2024-03-20 00:34:17,303 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 02:27:25,358 - INFO - Logging configured.
+2024-03-20 02:27:25,359 - INFO - Environment variables loaded.
+2024-03-20 02:27:25,362 - INFO - Found plugin: calculator
+2024-03-20 02:27:25,364 - INFO - Registered command: calculator
+2024-03-20 02:27:25,364 - INFO - Found plugin: csv
+2024-03-20 02:27:25,577 - INFO - Registered command: csv
+2024-03-20 02:27:25,577 - INFO - Found plugin: exit
+2024-03-20 02:27:25,577 - INFO - Registered command: exit
+2024-03-20 02:27:25,577 - INFO - Found plugin: goodbye
+2024-03-20 02:27:25,577 - INFO - Registered command: goodbye
+2024-03-20 02:27:25,577 - INFO - Found plugin: greet
+2024-03-20 02:27:25,578 - INFO - Registered command: greet
+2024-03-20 02:27:25,578 - INFO - Found plugin: history
+2024-03-20 02:27:25,578 - INFO - Registered command: history
+2024-03-20 02:27:25,579 - INFO - Found plugin: menu
+2024-03-20 02:27:25,579 - INFO - Found plugin: openai
+2024-03-20 02:27:25,579 - INFO - Registered command: openai
+2024-03-20 02:27:25,579 - INFO - Application starting...
+2024-03-20 02:27:46,073 - INFO - States saved to CSV at './data/states.csv'.
+2024-03-20 02:27:46,073 - INFO - the relative path  to save my file is ./data/gpt_states.csv
+2024-03-20 02:27:46,073 - INFO - the absolute path  to save my file is /Users/tbz/code/tabrezdn1/is601-web-systems/is601-mid-2024/data/gpt_states.csv
+2024-03-20 02:27:46,092 - INFO - Record 0: CA: California
+2024-03-20 02:27:46,092 - INFO - Index: 0,     State Abbreviation: CA
+2024-03-20 02:27:46,092 - INFO - Index: 0,     State Name: California
+2024-03-20 02:27:46,093 - INFO - Index: 0,     Population: 39538223
+2024-03-20 02:27:46,093 - INFO - Index: 0,     Capital: Sacramento
+2024-03-20 02:27:46,093 - INFO - Index: 0,     GDP: 3.1T
+2024-03-20 02:27:46,093 - INFO - Record 1: NJ: New Jersey
+2024-03-20 02:27:46,093 - INFO - Index: 1,     State Abbreviation: NJ
+2024-03-20 02:27:46,093 - INFO - Index: 1,     State Name: New Jersey
+2024-03-20 02:27:46,094 - INFO - Index: 1,     Population: 8882190
+2024-03-20 02:27:46,094 - INFO - Index: 1,     Capital: Trenton
+2024-03-20 02:27:46,094 - INFO - Index: 1,     GDP: 0.6T
+2024-03-20 02:27:46,094 - INFO - Record 2: TX: Texas
+2024-03-20 02:27:46,094 - INFO - Index: 2,     State Abbreviation: TX
+2024-03-20 02:27:46,094 - INFO - Index: 2,     State Name: Texas
+2024-03-20 02:27:46,094 - INFO - Index: 2,     Population: 29145505
+2024-03-20 02:27:46,094 - INFO - Index: 2,     Capital: Austin
+2024-03-20 02:27:46,094 - INFO - Index: 2,     GDP: 1.9T
+2024-03-20 02:27:46,095 - INFO - Record 3: FL: Florida
+2024-03-20 02:27:46,095 - INFO - Index: 3,     State Abbreviation: FL
+2024-03-20 02:27:46,095 - INFO - Index: 3,     State Name: Florida
+2024-03-20 02:27:46,095 - INFO - Index: 3,     Population: 21538187
+2024-03-20 02:27:46,095 - INFO - Index: 3,     Capital: Tallahassee
+2024-03-20 02:27:46,095 - INFO - Index: 3,     GDP: 1.1T
+2024-03-20 02:27:46,095 - INFO - Record 4: IL: Illinois
+2024-03-20 02:27:46,095 - INFO - Index: 4,     State Abbreviation: IL
+2024-03-20 02:27:46,095 - INFO - Index: 4,     State Name: Illinois
+2024-03-20 02:27:46,095 - INFO - Index: 4,     Population: 12671821
+2024-03-20 02:27:46,095 - INFO - Index: 4,     Capital: Springfield
+2024-03-20 02:27:46,095 - INFO - Index: 4,     GDP: 0.9T
+2024-03-20 02:27:46,095 - INFO - Record 5: NY: New York
+2024-03-20 02:27:46,095 - INFO - Index: 5,     State Abbreviation: NY
+2024-03-20 02:27:46,095 - INFO - Index: 5,     State Name: New York
+2024-03-20 02:27:46,095 - INFO - Index: 5,     Population: 20201249
+2024-03-20 02:27:46,096 - INFO - Index: 5,     Capital: Albany
+2024-03-20 02:27:46,096 - INFO - Index: 5,     GDP: 1.7T
+2024-03-20 02:32:01,242 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 02:32:02,673 - INFO - Logging configured.
+2024-03-20 02:32:02,674 - INFO - Environment variables loaded.
+2024-03-20 02:32:02,677 - INFO - Found plugin: calculator
+2024-03-20 02:32:02,679 - INFO - Registered command: calculator
+2024-03-20 02:32:02,679 - INFO - Found plugin: csv
+2024-03-20 02:32:02,896 - INFO - Registered command: csv
+2024-03-20 02:32:02,896 - INFO - Found plugin: exit
+2024-03-20 02:32:02,896 - INFO - Registered command: exit
+2024-03-20 02:32:02,897 - INFO - Found plugin: goodbye
+2024-03-20 02:32:02,897 - INFO - Registered command: goodbye
+2024-03-20 02:32:02,897 - INFO - Found plugin: greet
+2024-03-20 02:32:02,898 - INFO - Registered command: greet
+2024-03-20 02:32:02,898 - INFO - Found plugin: history
+2024-03-20 02:32:02,898 - INFO - Registered command: history
+2024-03-20 02:32:02,898 - INFO - Found plugin: menu
+2024-03-20 02:32:02,898 - INFO - Found plugin: openai
+2024-03-20 02:32:02,898 - INFO - Registered command: openai
+2024-03-20 02:32:02,899 - INFO - Application starting...
+2024-03-20 02:32:04,581 - INFO - States saved to CSV at './data/states.csv'.
+2024-03-20 02:32:04,581 - INFO - the relative path  to save my file is ./data/gpt_states.csv
+2024-03-20 02:32:04,581 - INFO - the absolute path  to save my file is /Users/tbz/code/tabrezdn1/is601-web-systems/is601-mid-2024/data/gpt_states.csv
+2024-03-20 02:32:04,584 - INFO - Record 0: CA: California
+2024-03-20 02:32:04,584 - INFO - Index: 0,     State Abbreviation: CA
+2024-03-20 02:32:04,584 - INFO - Index: 0,     State Name: California
+2024-03-20 02:32:04,584 - INFO - Index: 0,     Population: 39538223
+2024-03-20 02:32:04,584 - INFO - Index: 0,     Capital: Sacramento
+2024-03-20 02:32:04,584 - INFO - Index: 0,     GDP: 3.1T
+2024-03-20 02:32:04,584 - INFO - Record 1: NJ: New Jersey
+2024-03-20 02:32:04,584 - INFO - Index: 1,     State Abbreviation: NJ
+2024-03-20 02:32:04,584 - INFO - Index: 1,     State Name: New Jersey
+2024-03-20 02:32:04,584 - INFO - Index: 1,     Population: 8882190
+2024-03-20 02:32:04,584 - INFO - Index: 1,     Capital: Trenton
+2024-03-20 02:32:04,584 - INFO - Index: 1,     GDP: 0.6T
+2024-03-20 02:32:04,585 - INFO - Record 2: TX: Texas
+2024-03-20 02:32:04,585 - INFO - Index: 2,     State Abbreviation: TX
+2024-03-20 02:32:04,585 - INFO - Index: 2,     State Name: Texas
+2024-03-20 02:32:04,585 - INFO - Index: 2,     Population: 29145505
+2024-03-20 02:32:04,585 - INFO - Index: 2,     Capital: Austin
+2024-03-20 02:32:04,585 - INFO - Index: 2,     GDP: 1.9T
+2024-03-20 02:32:04,585 - INFO - Record 3: FL: Florida
+2024-03-20 02:32:04,585 - INFO - Index: 3,     State Abbreviation: FL
+2024-03-20 02:32:04,585 - INFO - Index: 3,     State Name: Florida
+2024-03-20 02:32:04,585 - INFO - Index: 3,     Population: 21538187
+2024-03-20 02:32:04,585 - INFO - Index: 3,     Capital: Tallahassee
+2024-03-20 02:32:04,585 - INFO - Index: 3,     GDP: 1.1T
+2024-03-20 02:32:04,585 - INFO - Record 4: IL: Illinois
+2024-03-20 02:32:04,585 - INFO - Index: 4,     State Abbreviation: IL
+2024-03-20 02:32:04,585 - INFO - Index: 4,     State Name: Illinois
+2024-03-20 02:32:04,585 - INFO - Index: 4,     Population: 12671821
+2024-03-20 02:32:04,585 - INFO - Index: 4,     Capital: Springfield
+2024-03-20 02:32:04,585 - INFO - Index: 4,     GDP: 0.9T
+2024-03-20 02:32:04,585 - INFO - Record 5: NY: New York
+2024-03-20 02:32:04,585 - INFO - Index: 5,     State Abbreviation: NY
+2024-03-20 02:32:04,585 - INFO - Index: 5,     State Name: New York
+2024-03-20 02:32:04,585 - INFO - Index: 5,     Population: 20201249
+2024-03-20 02:32:04,585 - INFO - Index: 5,     Capital: Albany
+2024-03-20 02:32:04,585 - INFO - Index: 5,     GDP: 1.7T
+2024-03-20 02:39:38,745 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 02:39:40,241 - INFO - Logging configured.
+2024-03-20 02:39:40,242 - INFO - Environment variables loaded.
+2024-03-20 02:39:40,245 - INFO - Found plugin: calculator
+2024-03-20 02:39:40,247 - INFO - Registered command: calculator
+2024-03-20 02:39:40,247 - INFO - Found plugin: csv
+2024-03-20 02:39:40,471 - INFO - Registered command: csv
+2024-03-20 02:39:40,471 - INFO - Found plugin: exit
+2024-03-20 02:39:40,471 - INFO - Registered command: exit
+2024-03-20 02:39:40,471 - INFO - Found plugin: goodbye
+2024-03-20 02:39:40,472 - INFO - Registered command: goodbye
+2024-03-20 02:39:40,472 - INFO - Found plugin: greet
+2024-03-20 02:39:40,472 - INFO - Registered command: greet
+2024-03-20 02:39:40,472 - INFO - Found plugin: history
+2024-03-20 02:39:40,473 - INFO - Registered command: history
+2024-03-20 02:39:40,473 - INFO - Found plugin: menu
+2024-03-20 02:39:40,473 - INFO - Found plugin: openai
+2024-03-20 02:39:40,473 - INFO - Registered command: openai
+2024-03-20 02:39:40,473 - INFO - Application starting...
+2024-03-20 02:39:41,692 - INFO - States saved to CSV at './data/states.csv'.
+2024-03-20 02:39:41,692 - INFO - The relative path to save my file is ./data/states.csv
+2024-03-20 02:39:41,695 - INFO - Record 0: CA: California, Population: 39538223, Capital: Sacramento, GDP: 3.1T
+2024-03-20 02:39:41,695 - INFO - Record 1: NJ: New Jersey, Population: 8882190, Capital: Trenton, GDP: 0.6T
+2024-03-20 02:39:41,695 - INFO - Record 2: TX: Texas, Population: 29145505, Capital: Austin, GDP: 1.9T
+2024-03-20 02:39:41,695 - INFO - Record 3: FL: Florida, Population: 21538187, Capital: Tallahassee, GDP: 1.1T
+2024-03-20 02:39:41,695 - INFO - Record 4: IL: Illinois, Population: 12671821, Capital: Springfield, GDP: 0.9T
+2024-03-20 02:39:41,695 - INFO - Record 5: NY: New York, Population: 20201249, Capital: Albany, GDP: 1.7T
+2024-03-20 02:53:48,363 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 02:53:50,217 - INFO - Logging configured.
+2024-03-20 02:53:50,218 - INFO - Environment variables loaded.
+2024-03-20 02:53:50,221 - INFO - Found plugin: calculator
+2024-03-20 02:53:50,223 - INFO - Registered command: calculator
+2024-03-20 02:53:50,223 - INFO - Found plugin: csv
+2024-03-20 02:53:50,457 - INFO - Registered command: csv
+2024-03-20 02:53:50,457 - INFO - Found plugin: exit
+2024-03-20 02:53:50,457 - INFO - Registered command: exit
+2024-03-20 02:53:50,457 - INFO - Found plugin: goodbye
+2024-03-20 02:53:50,458 - INFO - Registered command: goodbye
+2024-03-20 02:53:50,458 - INFO - Found plugin: greet
+2024-03-20 02:53:50,458 - INFO - Registered command: greet
+2024-03-20 02:53:50,459 - INFO - Found plugin: history
+2024-03-20 02:53:50,459 - INFO - Registered command: history
+2024-03-20 02:53:50,459 - INFO - Found plugin: menu
+2024-03-20 02:53:50,459 - INFO - Found plugin: openai
+2024-03-20 02:53:50,459 - INFO - Registered command: openai
+2024-03-20 02:53:50,459 - INFO - Application starting...
+2024-03-20 02:53:52,106 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 02:56:22,945 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 02:56:24,010 - INFO - Logging configured.
+2024-03-20 02:56:24,011 - INFO - Environment variables loaded.
+2024-03-20 02:56:24,014 - INFO - Found plugin: calculator
+2024-03-20 02:56:24,016 - INFO - Registered command: calculator
+2024-03-20 02:56:24,016 - INFO - Found plugin: csv
+2024-03-20 02:56:24,241 - INFO - Registered command: csv
+2024-03-20 02:56:24,241 - INFO - Found plugin: exit
+2024-03-20 02:56:24,242 - INFO - Registered command: exit
+2024-03-20 02:56:24,242 - INFO - Found plugin: goodbye
+2024-03-20 02:56:24,242 - INFO - Registered command: goodbye
+2024-03-20 02:56:24,242 - INFO - Found plugin: greet
+2024-03-20 02:56:24,243 - INFO - Registered command: greet
+2024-03-20 02:56:24,243 - INFO - Found plugin: history
+2024-03-20 02:56:24,243 - INFO - Registered command: history
+2024-03-20 02:56:24,243 - INFO - Found plugin: menu
+2024-03-20 02:56:24,243 - INFO - Found plugin: openai
+2024-03-20 02:56:24,244 - INFO - Registered command: openai
+2024-03-20 02:56:24,244 - INFO - Application starting...
+2024-03-20 02:56:25,037 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 02:56:25,038 - INFO - Record 0: NJ: New Jersey
+2024-03-20 02:56:25,038 - INFO - Index: 0,     State Abbreviation: NJ
+2024-03-20 02:56:25,038 - INFO - Index: 0,     State Name: New Jersey
+2024-03-20 02:56:25,038 - INFO - Index: 0,     Population: 8882190
+2024-03-20 02:56:25,038 - INFO - Record 1: IL: Illinois
+2024-03-20 02:56:25,038 - INFO - Index: 1,     State Abbreviation: IL
+2024-03-20 02:56:25,039 - INFO - Index: 1,     State Name: Illinois
+2024-03-20 02:56:25,039 - INFO - Index: 1,     Population: 12671821
+2024-03-20 02:56:25,039 - INFO - Record 2: NY: New York
+2024-03-20 02:56:25,039 - INFO - Index: 2,     State Abbreviation: NY
+2024-03-20 02:56:25,039 - INFO - Index: 2,     State Name: New York
+2024-03-20 02:56:25,039 - INFO - Index: 2,     Population: 20201249
+2024-03-20 02:56:25,039 - INFO - Record 3: FL: Florida
+2024-03-20 02:56:25,039 - INFO - Index: 3,     State Abbreviation: FL
+2024-03-20 02:56:25,039 - INFO - Index: 3,     State Name: Florida
+2024-03-20 02:56:25,039 - INFO - Index: 3,     Population: 21538187
+2024-03-20 02:56:25,039 - INFO - Record 4: TX: Texas
+2024-03-20 02:56:25,039 - INFO - Index: 4,     State Abbreviation: TX
+2024-03-20 02:56:25,039 - INFO - Index: 4,     State Name: Texas
+2024-03-20 02:56:25,039 - INFO - Index: 4,     Population: 29145505
+2024-03-20 02:56:25,039 - INFO - Record 5: CA: California
+2024-03-20 02:56:25,039 - INFO - Index: 5,     State Abbreviation: CA
+2024-03-20 02:56:25,039 - INFO - Index: 5,     State Name: California
+2024-03-20 02:56:25,039 - INFO - Index: 5,     Population: 39538223
+2024-03-20 03:07:08,127 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 03:07:09,703 - INFO - Logging configured.
+2024-03-20 03:07:09,703 - INFO - Environment variables loaded.
+2024-03-20 03:07:09,706 - INFO - Found plugin: calculator
+2024-03-20 03:07:09,708 - INFO - Registered command: calculator
+2024-03-20 03:07:09,708 - INFO - Found plugin: csv
+2024-03-20 03:07:09,929 - INFO - Registered command: csv
+2024-03-20 03:07:09,929 - INFO - Found plugin: exit
+2024-03-20 03:07:09,929 - INFO - Registered command: exit
+2024-03-20 03:07:09,929 - INFO - Found plugin: goodbye
+2024-03-20 03:07:09,929 - INFO - Registered command: goodbye
+2024-03-20 03:07:09,930 - INFO - Found plugin: greet
+2024-03-20 03:07:09,930 - INFO - Registered command: greet
+2024-03-20 03:07:09,930 - INFO - Found plugin: history
+2024-03-20 03:07:09,931 - INFO - Registered command: history
+2024-03-20 03:07:09,931 - INFO - Found plugin: menu
+2024-03-20 03:07:09,931 - INFO - Found plugin: openai
+2024-03-20 03:07:09,931 - INFO - Registered command: openai
+2024-03-20 03:07:09,931 - INFO - Application starting...
+2024-03-20 03:07:11,513 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 03:07:11,514 - INFO - Record 0: NJ: New Jersey
+2024-03-20 03:07:11,514 - INFO - Index: 0,     State Abbreviation: NJ
+2024-03-20 03:07:11,515 - INFO - Index: 0,     State Name: New Jersey
+2024-03-20 03:07:11,515 - INFO - Index: 0,     Population: 8882190
+2024-03-20 03:07:11,515 - INFO - Record 1: IL: Illinois
+2024-03-20 03:07:11,515 - INFO - Index: 1,     State Abbreviation: IL
+2024-03-20 03:07:11,515 - INFO - Index: 1,     State Name: Illinois
+2024-03-20 03:07:11,515 - INFO - Index: 1,     Population: 12671821
+2024-03-20 03:07:11,515 - INFO - Record 2: NY: New York
+2024-03-20 03:07:11,515 - INFO - Index: 2,     State Abbreviation: NY
+2024-03-20 03:07:11,515 - INFO - Index: 2,     State Name: New York
+2024-03-20 03:07:11,515 - INFO - Index: 2,     Population: 20201249
+2024-03-20 03:07:11,515 - INFO - Record 3: FL: Florida
+2024-03-20 03:07:11,515 - INFO - Index: 3,     State Abbreviation: FL
+2024-03-20 03:07:11,515 - INFO - Index: 3,     State Name: Florida
+2024-03-20 03:07:11,515 - INFO - Index: 3,     Population: 21538187
+2024-03-20 03:07:11,515 - INFO - Record 4: TX: Texas
+2024-03-20 03:07:11,515 - INFO - Index: 4,     State Abbreviation: TX
+2024-03-20 03:07:11,515 - INFO - Index: 4,     State Name: Texas
+2024-03-20 03:07:11,515 - INFO - Index: 4,     Population: 29145505
+2024-03-20 03:07:11,515 - INFO - Record 5: CA: California
+2024-03-20 03:07:11,515 - INFO - Index: 5,     State Abbreviation: CA
+2024-03-20 03:07:11,515 - INFO - Index: 5,     State Name: California
+2024-03-20 03:07:11,515 - INFO - Index: 5,     Population: 39538223
+2024-03-20 03:08:48,960 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 03:08:52,767 - INFO - Logging configured.
+2024-03-20 03:08:52,767 - INFO - Environment variables loaded.
+2024-03-20 03:08:52,771 - INFO - Found plugin: calculator
+2024-03-20 03:08:52,773 - INFO - Registered command: calculator
+2024-03-20 03:08:52,773 - INFO - Found plugin: csv
+2024-03-20 03:08:52,998 - INFO - Registered command: csv
+2024-03-20 03:08:52,998 - INFO - Found plugin: exit
+2024-03-20 03:08:52,998 - INFO - Registered command: exit
+2024-03-20 03:08:52,998 - INFO - Found plugin: goodbye
+2024-03-20 03:08:52,998 - INFO - Registered command: goodbye
+2024-03-20 03:08:52,998 - INFO - Found plugin: greet
+2024-03-20 03:08:52,999 - INFO - Registered command: greet
+2024-03-20 03:08:52,999 - INFO - Found plugin: history
+2024-03-20 03:08:52,999 - INFO - Registered command: history
+2024-03-20 03:08:52,999 - INFO - Found plugin: menu
+2024-03-20 03:08:52,999 - INFO - Found plugin: openai
+2024-03-20 03:08:53,000 - INFO - Registered command: openai
+2024-03-20 03:08:53,000 - INFO - Application starting...
+2024-03-20 03:08:54,070 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 03:08:54,072 - INFO - Record 0: NJ: New Jersey
+2024-03-20 03:08:54,072 - INFO - Index: 0,     State Abbreviation: NJ
+2024-03-20 03:08:54,072 - INFO - Index: 0,     State Name: New Jersey
+2024-03-20 03:08:54,072 - INFO - Index: 0,     Population: 8882190
+2024-03-20 03:08:54,072 - INFO - Record 1: IL: Illinois
+2024-03-20 03:08:54,072 - INFO - Index: 1,     State Abbreviation: IL
+2024-03-20 03:08:54,072 - INFO - Index: 1,     State Name: Illinois
+2024-03-20 03:08:54,072 - INFO - Index: 1,     Population: 12671821
+2024-03-20 03:08:54,072 - INFO - Record 2: NY: New York
+2024-03-20 03:08:54,072 - INFO - Index: 2,     State Abbreviation: NY
+2024-03-20 03:08:54,072 - INFO - Index: 2,     State Name: New York
+2024-03-20 03:08:54,072 - INFO - Index: 2,     Population: 20201249
+2024-03-20 03:08:54,072 - INFO - Record 3: FL: Florida
+2024-03-20 03:08:54,072 - INFO - Index: 3,     State Abbreviation: FL
+2024-03-20 03:08:54,072 - INFO - Index: 3,     State Name: Florida
+2024-03-20 03:08:54,072 - INFO - Index: 3,     Population: 21538187
+2024-03-20 03:08:54,072 - INFO - Record 4: TX: Texas
+2024-03-20 03:08:54,072 - INFO - Index: 4,     State Abbreviation: TX
+2024-03-20 03:08:54,072 - INFO - Index: 4,     State Name: Texas
+2024-03-20 03:08:54,073 - INFO - Index: 4,     Population: 29145505
+2024-03-20 03:08:54,073 - INFO - Record 5: CA: California
+2024-03-20 03:08:54,073 - INFO - Index: 5,     State Abbreviation: CA
+2024-03-20 03:08:54,073 - INFO - Index: 5,     State Name: California
+2024-03-20 03:08:54,073 - INFO - Index: 5,     Population: 39538223
+2024-03-20 03:09:46,927 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 03:14:32,396 - INFO - Logging configured.
+2024-03-20 03:14:32,397 - INFO - Environment variables loaded.
+2024-03-20 03:14:32,400 - INFO - Found plugin: calculator
+2024-03-20 03:14:32,402 - INFO - Registered command: calculator
+2024-03-20 03:14:32,402 - INFO - Found plugin: csv
+2024-03-20 03:14:32,783 - INFO - Registered command: csv
+2024-03-20 03:14:32,783 - INFO - Found plugin: exit
+2024-03-20 03:14:32,784 - INFO - Registered command: exit
+2024-03-20 03:14:32,784 - INFO - Found plugin: goodbye
+2024-03-20 03:14:32,784 - INFO - Registered command: goodbye
+2024-03-20 03:14:32,784 - INFO - Found plugin: greet
+2024-03-20 03:14:32,785 - INFO - Registered command: greet
+2024-03-20 03:14:32,785 - INFO - Found plugin: history
+2024-03-20 03:14:32,785 - INFO - Registered command: history
+2024-03-20 03:14:32,785 - INFO - Found plugin: menu
+2024-03-20 03:14:32,785 - INFO - Found plugin: openai
+2024-03-20 03:14:32,786 - INFO - Registered command: openai
+2024-03-20 03:14:32,786 - INFO - Application starting...
+2024-03-20 03:14:34,203 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 03:14:34,204 - INFO - Record 0: OR: Oregon
+2024-03-20 03:14:34,204 - INFO - Index: 0,     State Abbreviation: OR
+2024-03-20 03:14:34,204 - INFO - Index: 0,     State Name: Oregon
+2024-03-20 03:14:34,204 - INFO - Index: 0,     Population: 4237256
+2024-03-20 03:14:34,204 - INFO - Record 1: MN: Minnesota
+2024-03-20 03:14:34,204 - INFO - Index: 1,     State Abbreviation: MN
+2024-03-20 03:14:34,204 - INFO - Index: 1,     State Name: Minnesota
+2024-03-20 03:14:34,205 - INFO - Index: 1,     Population: 5700671
+2024-03-20 03:14:34,205 - INFO - Record 2: CO: Colorado
+2024-03-20 03:14:34,205 - INFO - Index: 2,     State Abbreviation: CO
+2024-03-20 03:14:34,205 - INFO - Index: 2,     State Name: Colorado
+2024-03-20 03:14:34,205 - INFO - Index: 2,     Population: 5773714
+2024-03-20 03:14:34,205 - INFO - Record 3: WI: Wisconsin
+2024-03-20 03:14:34,205 - INFO - Index: 3,     State Abbreviation: WI
+2024-03-20 03:14:34,205 - INFO - Index: 3,     State Name: Wisconsin
+2024-03-20 03:14:34,205 - INFO - Index: 3,     Population: 5893718
+2024-03-20 03:14:34,205 - INFO - Record 4: MO: Missouri
+2024-03-20 03:14:34,205 - INFO - Index: 4,     State Abbreviation: MO
+2024-03-20 03:14:34,205 - INFO - Index: 4,     State Name: Missouri
+2024-03-20 03:14:34,205 - INFO - Index: 4,     Population: 6154913
+2024-03-20 03:14:34,205 - INFO - Record 5: MA: Massachusetts
+2024-03-20 03:14:34,205 - INFO - Index: 5,     State Abbreviation: MA
+2024-03-20 03:14:34,205 - INFO - Index: 5,     State Name: Massachusetts
+2024-03-20 03:14:34,205 - INFO - Index: 5,     Population: 7029917
+2024-03-20 03:14:34,205 - INFO - Record 6: AZ: Arizona
+2024-03-20 03:14:34,205 - INFO - Index: 6,     State Abbreviation: AZ
+2024-03-20 03:14:34,205 - INFO - Index: 6,     State Name: Arizona
+2024-03-20 03:14:34,205 - INFO - Index: 6,     Population: 7151502
+2024-03-20 03:14:34,205 - INFO - Record 7: WA: Washington
+2024-03-20 03:14:34,205 - INFO - Index: 7,     State Abbreviation: WA
+2024-03-20 03:14:34,205 - INFO - Index: 7,     State Name: Washington
+2024-03-20 03:14:34,205 - INFO - Index: 7,     Population: 7693612
+2024-03-20 03:14:34,205 - INFO - Record 8: VA: Virginia
+2024-03-20 03:14:34,205 - INFO - Index: 8,     State Abbreviation: VA
+2024-03-20 03:14:34,206 - INFO - Index: 8,     State Name: Virginia
+2024-03-20 03:14:34,206 - INFO - Index: 8,     Population: 8631393
+2024-03-20 03:14:34,206 - INFO - Record 9: NJ: New Jersey
+2024-03-20 03:14:34,206 - INFO - Index: 9,     State Abbreviation: NJ
+2024-03-20 03:14:34,206 - INFO - Index: 9,     State Name: New Jersey
+2024-03-20 03:14:34,206 - INFO - Index: 9,     Population: 8882190
+2024-03-20 03:14:34,206 - INFO - Record 10: MI: Michigan
+2024-03-20 03:14:34,206 - INFO - Index: 10,     State Abbreviation: MI
+2024-03-20 03:14:34,206 - INFO - Index: 10,     State Name: Michigan
+2024-03-20 03:14:34,206 - INFO - Index: 10,     Population: 10077331
+2024-03-20 03:14:34,206 - INFO - Record 11: NC: North Carolina
+2024-03-20 03:14:34,206 - INFO - Index: 11,     State Abbreviation: NC
+2024-03-20 03:14:34,206 - INFO - Index: 11,     State Name: North Carolina
+2024-03-20 03:14:34,206 - INFO - Index: 11,     Population: 10488084
+2024-03-20 03:14:34,206 - INFO - Record 12: GA: Georgia
+2024-03-20 03:14:34,206 - INFO - Index: 12,     State Abbreviation: GA
+2024-03-20 03:14:34,206 - INFO - Index: 12,     State Name: Georgia
+2024-03-20 03:14:34,206 - INFO - Index: 12,     Population: 10711908
+2024-03-20 03:14:34,206 - INFO - Record 13: OH: Ohio
+2024-03-20 03:14:34,206 - INFO - Index: 13,     State Abbreviation: OH
+2024-03-20 03:14:34,206 - INFO - Index: 13,     State Name: Ohio
+2024-03-20 03:14:34,206 - INFO - Index: 13,     Population: 11799448
+2024-03-20 03:14:34,206 - INFO - Record 14: IL: Illinois
+2024-03-20 03:14:34,206 - INFO - Index: 14,     State Abbreviation: IL
+2024-03-20 03:14:34,206 - INFO - Index: 14,     State Name: Illinois
+2024-03-20 03:14:34,206 - INFO - Index: 14,     Population: 12671821
+2024-03-20 03:14:34,206 - INFO - Record 15: PA: Pennsylvania
+2024-03-20 03:14:34,206 - INFO - Index: 15,     State Abbreviation: PA
+2024-03-20 03:14:34,206 - INFO - Index: 15,     State Name: Pennsylvania
+2024-03-20 03:14:34,206 - INFO - Index: 15,     Population: 12801989
+2024-03-20 03:14:34,206 - INFO - Record 16: NY: New York
+2024-03-20 03:14:34,206 - INFO - Index: 16,     State Abbreviation: NY
+2024-03-20 03:14:34,206 - INFO - Index: 16,     State Name: New York
+2024-03-20 03:14:34,206 - INFO - Index: 16,     Population: 20201249
+2024-03-20 03:14:34,207 - INFO - Record 17: FL: Florida
+2024-03-20 03:14:34,207 - INFO - Index: 17,     State Abbreviation: FL
+2024-03-20 03:14:34,207 - INFO - Index: 17,     State Name: Florida
+2024-03-20 03:14:34,207 - INFO - Index: 17,     Population: 21538187
+2024-03-20 03:14:34,207 - INFO - Record 18: TX: Texas
+2024-03-20 03:14:34,207 - INFO - Index: 18,     State Abbreviation: TX
+2024-03-20 03:14:34,207 - INFO - Index: 18,     State Name: Texas
+2024-03-20 03:14:34,207 - INFO - Index: 18,     Population: 29145505
+2024-03-20 03:14:34,207 - INFO - Record 19: CA: California
+2024-03-20 03:14:34,207 - INFO - Index: 19,     State Abbreviation: CA
+2024-03-20 03:14:34,207 - INFO - Index: 19,     State Name: California
+2024-03-20 03:14:34,207 - INFO - Index: 19,     Population: 39538223
+2024-03-20 03:22:41,050 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 03:47:09,257 - INFO - Logging configured.
+2024-03-20 03:47:09,257 - INFO - Environment variables loaded.
+2024-03-20 03:47:09,261 - INFO - Found plugin: calculator
+2024-03-20 03:47:09,262 - INFO - Registered command: calculator
+2024-03-20 03:47:09,262 - INFO - Found plugin: csv
+2024-03-20 03:47:09,582 - INFO - Registered command: csv
+2024-03-20 03:47:09,582 - INFO - Found plugin: exit
+2024-03-20 03:47:09,583 - INFO - Registered command: exit
+2024-03-20 03:47:09,583 - INFO - Found plugin: goodbye
+2024-03-20 03:47:09,583 - INFO - Registered command: goodbye
+2024-03-20 03:47:09,583 - INFO - Found plugin: greet
+2024-03-20 03:47:09,584 - INFO - Registered command: greet
+2024-03-20 03:47:09,584 - INFO - Found plugin: history
+2024-03-20 03:47:09,584 - INFO - Registered command: history
+2024-03-20 03:47:09,584 - INFO - Found plugin: menu
+2024-03-20 03:47:09,584 - INFO - Found plugin: openai
+2024-03-20 03:47:09,584 - INFO - Registered command: openai
+2024-03-20 03:47:09,584 - INFO - Application starting...
+2024-03-20 03:47:11,400 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 03:47:11,401 - INFO - Record 0: NJ: New Jersey
+2024-03-20 03:47:11,401 - INFO - Index: 0,     State Abbreviation: NJ
+2024-03-20 03:47:11,401 - INFO - Index: 0,     State Name: New Jersey
+2024-03-20 03:47:11,401 - INFO - Index: 0,     Population: 8882190
+2024-03-20 03:47:11,401 - INFO - Record 1: TX: Texas
+2024-03-20 03:47:11,401 - INFO - Index: 1,     State Abbreviation: TX
+2024-03-20 03:47:11,401 - INFO - Index: 1,     State Name: Texas
+2024-03-20 03:47:11,401 - INFO - Index: 1,     Population: 29145505
+2024-03-20 03:47:11,401 - INFO - Record 2: CA: California
+2024-03-20 03:47:11,401 - INFO - Index: 2,     State Abbreviation: CA
+2024-03-20 03:47:11,401 - INFO - Index: 2,     State Name: California
+2024-03-20 03:47:11,401 - INFO - Index: 2,     Population: 39538223
+2024-03-20 03:49:29,730 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 03:52:38,314 - INFO - Logging configured.
+2024-03-20 03:52:38,315 - INFO - Environment variables loaded.
+2024-03-20 03:52:38,319 - INFO - Found plugin: calculator
+2024-03-20 03:52:38,320 - INFO - Registered command: calculator
+2024-03-20 03:52:38,320 - INFO - Found plugin: csv
+2024-03-20 03:52:38,655 - INFO - Registered command: csv
+2024-03-20 03:52:38,655 - INFO - Found plugin: exit
+2024-03-20 03:52:38,655 - INFO - Registered command: exit
+2024-03-20 03:52:38,655 - INFO - Found plugin: goodbye
+2024-03-20 03:52:38,655 - INFO - Registered command: goodbye
+2024-03-20 03:52:38,655 - INFO - Found plugin: greet
+2024-03-20 03:52:38,656 - INFO - Registered command: greet
+2024-03-20 03:52:38,656 - INFO - Found plugin: history
+2024-03-20 03:52:38,656 - INFO - Registered command: history
+2024-03-20 03:52:38,656 - INFO - Found plugin: menu
+2024-03-20 03:52:38,656 - INFO - Found plugin: openai
+2024-03-20 03:52:38,657 - INFO - Registered command: openai
+2024-03-20 03:52:38,657 - INFO - Application starting...
+2024-03-20 03:52:40,466 - INFO - Processed data saved to './data/sorted_states.csv'
+2024-03-20 03:52:40,467 - INFO - Record 0: OR: Oregon
+2024-03-20 03:52:40,467 - INFO - Index: 0,     State Abbreviation: OR
+2024-03-20 03:52:40,467 - INFO - Index: 0,     State Name: Oregon
+2024-03-20 03:52:40,467 - INFO - Index: 0,     Population: 4237256
+2024-03-20 03:52:40,467 - INFO - Record 1: MN: Minnesota
+2024-03-20 03:52:40,467 - INFO - Index: 1,     State Abbreviation: MN
+2024-03-20 03:52:40,467 - INFO - Index: 1,     State Name: Minnesota
+2024-03-20 03:52:40,467 - INFO - Index: 1,     Population: 5700671
+2024-03-20 03:52:40,467 - INFO - Record 2: CO: Colorado
+2024-03-20 03:52:40,467 - INFO - Index: 2,     State Abbreviation: CO
+2024-03-20 03:52:40,467 - INFO - Index: 2,     State Name: Colorado
+2024-03-20 03:52:40,467 - INFO - Index: 2,     Population: 5773714
+2024-03-20 03:52:40,467 - INFO - Record 3: WI: Wisconsin
+2024-03-20 03:52:40,467 - INFO - Index: 3,     State Abbreviation: WI
+2024-03-20 03:52:40,467 - INFO - Index: 3,     State Name: Wisconsin
+2024-03-20 03:52:40,467 - INFO - Index: 3,     Population: 5893718
+2024-03-20 03:52:40,467 - INFO - Record 4: MO: Missouri
+2024-03-20 03:52:40,467 - INFO - Index: 4,     State Abbreviation: MO
+2024-03-20 03:52:40,467 - INFO - Index: 4,     State Name: Missouri
+2024-03-20 03:52:40,467 - INFO - Index: 4,     Population: 6154913
+2024-03-20 03:52:40,467 - INFO - Record 5: MA: Massachusetts
+2024-03-20 03:52:40,467 - INFO - Index: 5,     State Abbreviation: MA
+2024-03-20 03:52:40,467 - INFO - Index: 5,     State Name: Massachusetts
+2024-03-20 03:52:40,467 - INFO - Index: 5,     Population: 7029917
+2024-03-20 03:52:40,467 - INFO - Record 6: AZ: Arizona
+2024-03-20 03:52:40,467 - INFO - Index: 6,     State Abbreviation: AZ
+2024-03-20 03:52:40,467 - INFO - Index: 6,     State Name: Arizona
+2024-03-20 03:52:40,467 - INFO - Index: 6,     Population: 7151502
+2024-03-20 03:52:40,468 - INFO - Record 7: WA: Washington
+2024-03-20 03:52:40,468 - INFO - Index: 7,     State Abbreviation: WA
+2024-03-20 03:52:40,468 - INFO - Index: 7,     State Name: Washington
+2024-03-20 03:52:40,468 - INFO - Index: 7,     Population: 7693612
+2024-03-20 03:52:40,468 - INFO - Record 8: VA: Virginia
+2024-03-20 03:52:40,468 - INFO - Index: 8,     State Abbreviation: VA
+2024-03-20 03:52:40,468 - INFO - Index: 8,     State Name: Virginia
+2024-03-20 03:52:40,468 - INFO - Index: 8,     Population: 8631393
+2024-03-20 03:52:40,468 - INFO - Record 9: NJ: New Jersey
+2024-03-20 03:52:40,468 - INFO - Index: 9,     State Abbreviation: NJ
+2024-03-20 03:52:40,468 - INFO - Index: 9,     State Name: New Jersey
+2024-03-20 03:52:40,468 - INFO - Index: 9,     Population: 8882190
+2024-03-20 03:52:40,468 - INFO - Record 10: MI: Michigan
+2024-03-20 03:52:40,468 - INFO - Index: 10,     State Abbreviation: MI
+2024-03-20 03:52:40,468 - INFO - Index: 10,     State Name: Michigan
+2024-03-20 03:52:40,468 - INFO - Index: 10,     Population: 10077331
+2024-03-20 03:52:40,468 - INFO - Record 11: NC: North Carolina
+2024-03-20 03:52:40,468 - INFO - Index: 11,     State Abbreviation: NC
+2024-03-20 03:52:40,468 - INFO - Index: 11,     State Name: North Carolina
+2024-03-20 03:52:40,468 - INFO - Index: 11,     Population: 10488084
+2024-03-20 03:52:40,468 - INFO - Record 12: GA: Georgia
+2024-03-20 03:52:40,468 - INFO - Index: 12,     State Abbreviation: GA
+2024-03-20 03:52:40,468 - INFO - Index: 12,     State Name: Georgia
+2024-03-20 03:52:40,468 - INFO - Index: 12,     Population: 10711908
+2024-03-20 03:52:40,468 - INFO - Record 13: OH: Ohio
+2024-03-20 03:52:40,468 - INFO - Index: 13,     State Abbreviation: OH
+2024-03-20 03:52:40,468 - INFO - Index: 13,     State Name: Ohio
+2024-03-20 03:52:40,468 - INFO - Index: 13,     Population: 11799448
+2024-03-20 03:52:40,468 - INFO - Record 14: IL: Illinois
+2024-03-20 03:52:40,468 - INFO - Index: 14,     State Abbreviation: IL
+2024-03-20 03:52:40,468 - INFO - Index: 14,     State Name: Illinois
+2024-03-20 03:52:40,468 - INFO - Index: 14,     Population: 12671821
+2024-03-20 03:52:40,468 - INFO - Record 15: PA: Pennsylvania
+2024-03-20 03:52:40,468 - INFO - Index: 15,     State Abbreviation: PA
+2024-03-20 03:52:40,468 - INFO - Index: 15,     State Name: Pennsylvania
+2024-03-20 03:52:40,469 - INFO - Index: 15,     Population: 12801989
+2024-03-20 03:52:40,469 - INFO - Record 16: NY: New York
+2024-03-20 03:52:40,469 - INFO - Index: 16,     State Abbreviation: NY
+2024-03-20 03:52:40,469 - INFO - Index: 16,     State Name: New York
+2024-03-20 03:52:40,469 - INFO - Index: 16,     Population: 20201249
+2024-03-20 03:52:40,469 - INFO - Record 17: FL: Florida
+2024-03-20 03:52:40,469 - INFO - Index: 17,     State Abbreviation: FL
+2024-03-20 03:52:40,469 - INFO - Index: 17,     State Name: Florida
+2024-03-20 03:52:40,469 - INFO - Index: 17,     Population: 21538187
+2024-03-20 03:52:40,469 - INFO - Record 18: TX: Texas
+2024-03-20 03:52:40,469 - INFO - Index: 18,     State Abbreviation: TX
+2024-03-20 03:52:40,469 - INFO - Index: 18,     State Name: Texas
+2024-03-20 03:52:40,469 - INFO - Index: 18,     Population: 29145505
+2024-03-20 03:52:40,469 - INFO - Record 19: CA: California
+2024-03-20 03:52:40,469 - INFO - Index: 19,     State Abbreviation: CA
+2024-03-20 03:52:40,469 - INFO - Index: 19,     State Name: California
+2024-03-20 03:52:40,469 - INFO - Index: 19,     Population: 39538223
