@@ -18,3 +18,38 @@
 2024-03-19 23:43:52,797 - INFO - Displaying main menu to user.
 2024-03-19 23:43:55,117 - INFO - User selected command: exit
 2024-03-19 23:43:55,117 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 00:33:55,915 - INFO - Logging configured.
+2024-03-20 00:33:55,915 - INFO - Environment variables loaded.
+2024-03-20 00:33:55,916 - INFO - IN DEVELOPMENT ENV
+2024-03-20 00:33:55,916 - INFO - DB_HOST: localhost
+2024-03-20 00:33:55,916 - INFO - DB_USER: myuser
+2024-03-20 00:33:55,916 - INFO - DB_PASS: mypassword
+2024-03-20 00:33:55,916 - INFO - API_KEY: 123456789abcdef
+2024-03-20 00:33:55,919 - INFO - Found plugin: calculator
+2024-03-20 00:33:55,920 - INFO - Registered command: calculator
+2024-03-20 00:33:55,920 - INFO - Found plugin: exit
+2024-03-20 00:33:55,921 - INFO - Registered command: exit
+2024-03-20 00:33:55,921 - INFO - Found plugin: goodbye
+2024-03-20 00:33:55,922 - INFO - Registered command: goodbye
+2024-03-20 00:33:55,922 - INFO - Found plugin: greet
+2024-03-20 00:33:55,922 - INFO - Registered command: greet
+2024-03-20 00:33:55,922 - INFO - Found plugin: menu
+2024-03-20 00:33:55,922 - INFO - Found plugin: openai
+2024-03-20 00:33:55,922 - INFO - Registered command: openai
+2024-03-20 00:33:55,922 - INFO - Application starting...
+2024-03-20 00:33:58,216 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 00:34:14,992 - INFO - Logging configured.
+2024-03-20 00:34:14,993 - INFO - Environment variables loaded.
+2024-03-20 00:34:14,995 - INFO - Found plugin: calculator
+2024-03-20 00:34:14,997 - INFO - Registered command: calculator
+2024-03-20 00:34:14,997 - INFO - Found plugin: exit
+2024-03-20 00:34:14,997 - INFO - Registered command: exit
+2024-03-20 00:34:14,997 - INFO - Found plugin: goodbye
+2024-03-20 00:34:14,998 - INFO - Registered command: goodbye
+2024-03-20 00:34:14,998 - INFO - Found plugin: greet
+2024-03-20 00:34:14,998 - INFO - Registered command: greet
+2024-03-20 00:34:14,998 - INFO - Found plugin: menu
+2024-03-20 00:34:14,999 - INFO - Found plugin: openai
+2024-03-20 00:34:14,999 - INFO - Registered command: openai
+2024-03-20 00:34:14,999 - INFO - Application starting...
+2024-03-20 00:34:17,303 - INFO - Executing ExitCommand - Application exiting...

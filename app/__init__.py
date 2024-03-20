@@ -4,12 +4,32 @@ import importlib
 from app.commands import CommandHandler, Command
 from app.plugins.menu import MenuCommand
 import logging
+from dotenv import load_dotenv
 
 class App:
     def __init__(self):  # Constructor
         os.makedirs('logs', exist_ok=True)  # Ensure the logs directory exists
         self.configure_logging()
+        load_dotenv()
+        self.settings = self.load_environment_variables()
+        self.settings.setdefault('ENVIRONMENT', 'PRODUCTION')
         self.command_handler = CommandHandler()
+    
+    def load_environment_variables(self):
+        settings = {key: value for key, value in os.environ.items()}
+        logging.info("Environment variables loaded.")
+        environment = settings.get('ENVIRONMENT', None)
+        if(environment == "DEVELOPMENT"):
+            # log the rest .env keys
+            logging.info("IN DEVELOPMENT ENV")
+            logging.info(f"DB_HOST: {settings.get('DB_HOST', None)}")
+            logging.info(f"DB_USER: {settings.get('DB_USER', None)}")
+            logging.info(f"DB_PASS: {settings.get('DB_PASS', None)}")
+            logging.info(f"API_KEY: {settings.get('API_KEY', None)}")
+        return settings
+
+    def get_environment_variable(self, env_var: str = 'ENVIRONMENT'):
+        return self.settings.get(env_var, None)
 
     def configure_logging(self):
         log_file_path = 'logs/app.log'
