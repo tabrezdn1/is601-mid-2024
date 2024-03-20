@@ -11,7 +11,7 @@ from app.plugins.calculator import CalculatorCommand
 from app.plugins.csv import CsvCommand
 from app.plugins.history import HistoryCommand
 from app.plugins.menu import MenuCommand
-from app.plugins.openai import OpenAICommand, chat
+from app.plugins.openai import OpenAICommand
 
 def test_app_greet_command(capfd, monkeypatch, caplog):
     """Test that the REPL correctly handles the 'greet' command and its logging."""
