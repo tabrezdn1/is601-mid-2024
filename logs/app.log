@@ -579,3 +579,95 @@
 2024-03-20 03:52:40,469 - INFO - Index: 19,     State Abbreviation: CA
 2024-03-20 03:52:40,469 - INFO - Index: 19,     State Name: California
 2024-03-20 03:52:40,469 - INFO - Index: 19,     Population: 39538223
+2024-03-20 15:56:16,965 - INFO - Logging configured.
+2024-03-20 15:56:16,966 - INFO - Environment variables loaded.
+2024-03-20 15:56:16,966 - INFO - Found plugin: calculator
+2024-03-20 15:56:16,968 - INFO - Registered command: calculator
+2024-03-20 15:56:16,968 - INFO - Found plugin: csv
+2024-03-20 15:56:16,968 - INFO - Registered command: csv
+2024-03-20 15:56:16,968 - INFO - Found plugin: exit
+2024-03-20 15:56:16,968 - INFO - Registered command: exit
+2024-03-20 15:56:16,968 - INFO - Found plugin: goodbye
+2024-03-20 15:56:16,969 - INFO - Registered command: goodbye
+2024-03-20 15:56:16,969 - INFO - Found plugin: greet
+2024-03-20 15:56:16,970 - INFO - Registered command: greet
+2024-03-20 15:56:16,970 - INFO - Found plugin: history
+2024-03-20 15:56:16,970 - INFO - Registered command: history
+2024-03-20 15:56:16,970 - INFO - Found plugin: menu
+2024-03-20 15:56:16,970 - INFO - Found plugin: openai
+2024-03-20 15:56:16,970 - INFO - Registered command: openai
+2024-03-20 15:56:16,970 - INFO - Application starting...
+2024-03-20 15:58:44,893 - INFO - Logging configured.
+2024-03-20 15:58:44,893 - INFO - Environment variables loaded.
+2024-03-20 15:58:44,894 - INFO - Found plugin: calculator
+2024-03-20 15:58:44,895 - INFO - Registered command: calculator
+2024-03-20 15:58:44,895 - INFO - Found plugin: csv
+2024-03-20 15:58:44,895 - INFO - Registered command: csv
+2024-03-20 15:58:44,895 - INFO - Found plugin: exit
+2024-03-20 15:58:44,896 - INFO - Registered command: exit
+2024-03-20 15:58:44,896 - INFO - Found plugin: goodbye
+2024-03-20 15:58:44,896 - INFO - Registered command: goodbye
+2024-03-20 15:58:44,896 - INFO - Found plugin: greet
+2024-03-20 15:58:44,897 - INFO - Registered command: greet
+2024-03-20 15:58:44,897 - INFO - Found plugin: history
+2024-03-20 15:58:44,897 - INFO - Registered command: history
+2024-03-20 15:58:44,897 - INFO - Found plugin: menu
+2024-03-20 15:58:44,897 - INFO - Found plugin: openai
+2024-03-20 15:58:44,898 - INFO - Registered command: openai
+2024-03-20 15:58:44,898 - INFO - Application starting...
+2024-03-20 15:58:57,559 - INFO - Executing GoodbyeCommand.
+2024-03-20 15:58:57,560 - INFO - GoodbyeCommand executed successfully.
+2024-03-20 15:58:59,708 - INFO - Executing GreetCommand.
+2024-03-20 15:58:59,709 - INFO - GreetCommand executed successfully.
+2024-03-20 15:59:25,741 - INFO - Displaying main menu to user.
+2024-03-20 15:59:35,094 - INFO - User selected command: goodbye
+2024-03-20 15:59:35,094 - INFO - Executing GoodbyeCommand.
+2024-03-20 15:59:35,095 - INFO - GoodbyeCommand executed successfully.
+2024-03-20 15:59:47,511 - INFO - User selected to go back from OpenAICommand.
+2024-03-20 15:59:54,378 - INFO - Executing calculator operation: Add
+2024-03-20 15:59:54,379 - INFO - Executing Add command.
+2024-03-20 15:59:56,444 - INFO - Addition result: 3.0
+2024-03-20 15:59:58,411 - INFO - User selected to go back from CalculatorCommand.
+2024-03-20 16:02:01,433 - INFO - Executing ExitCommand - Application exiting...
+2024-03-20 16:02:22,218 - INFO - Logging configured.
+2024-03-20 16:02:22,218 - INFO - Environment variables loaded.
+2024-03-20 16:02:22,219 - INFO - Found plugin: calculator
+2024-03-20 16:02:22,220 - INFO - Registered command: calculator
+2024-03-20 16:02:22,220 - INFO - Found plugin: csv
+2024-03-20 16:02:22,221 - INFO - Registered command: csv
+2024-03-20 16:02:22,221 - INFO - Found plugin: exit
+2024-03-20 16:02:22,221 - INFO - Registered command: exit
+2024-03-20 16:02:22,221 - INFO - Found plugin: goodbye
+2024-03-20 16:02:22,221 - INFO - Registered command: goodbye
+2024-03-20 16:02:22,221 - INFO - Found plugin: greet
+2024-03-20 16:02:22,222 - INFO - Registered command: greet
+2024-03-20 16:02:22,222 - INFO - Found plugin: history
+2024-03-20 16:02:22,222 - INFO - Registered command: history
+2024-03-20 16:02:22,222 - INFO - Found plugin: menu
+2024-03-20 16:02:22,222 - INFO - Found plugin: openai
+2024-03-20 16:02:22,223 - INFO - Registered command: openai
+2024-03-20 16:02:22,223 - INFO - Application starting...
+2024-03-20 16:03:23,461 - INFO - Exiting application.
+2024-03-20 16:03:25,058 - INFO - Logging configured.
+2024-03-20 16:03:25,059 - INFO - Environment variables loaded.
+2024-03-20 16:03:25,059 - INFO - Found plugin: calculator
+2024-03-20 16:03:25,061 - INFO - Registered command: calculator
+2024-03-20 16:03:25,061 - INFO - Found plugin: csv
+2024-03-20 16:03:25,061 - INFO - Registered command: csv
+2024-03-20 16:03:25,061 - INFO - Found plugin: exit
+2024-03-20 16:03:25,061 - INFO - Registered command: exit
+2024-03-20 16:03:25,061 - INFO - Found plugin: goodbye
+2024-03-20 16:03:25,062 - INFO - Registered command: goodbye
+2024-03-20 16:03:25,062 - INFO - Found plugin: greet
+2024-03-20 16:03:25,063 - INFO - Registered command: greet
+2024-03-20 16:03:25,063 - INFO - Found plugin: history
+2024-03-20 16:03:25,063 - INFO - Registered command: history
+2024-03-20 16:03:25,063 - INFO - Found plugin: menu
+2024-03-20 16:03:25,063 - INFO - Found plugin: openai
+2024-03-20 16:03:25,063 - INFO - Registered command: openai
+2024-03-20 16:03:25,063 - INFO - Application starting...
+2024-03-20 16:03:36,478 - INFO - Executing GoodbyeCommand.
+2024-03-20 16:03:36,479 - INFO - GoodbyeCommand executed successfully.
+2024-03-20 16:03:37,173 - INFO - Executing GreetCommand.
+2024-03-20 16:03:37,173 - INFO - GreetCommand executed successfully.
+2024-03-20 16:05:06,819 - INFO - Exiting application.

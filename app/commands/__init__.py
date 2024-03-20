@@ -16,10 +16,11 @@ class CommandHandler:
         self.commands[command_name] = command_instance
 
     def execute_command(self, command_name: str):
+        # Easier to Ask for Forgiveness than Permission (EAFP)
         try:
             self.commands[command_name].execute()
-        except KeyError:
-            print(f"No such command: {command_name}")
+        except KeyError: # Catch the exception if the operation fails
+            print(f"No such command: {command_name}") # Exception caught and handled gracefully
 
     def list_commands(self):
         for index, command_name in enumerate(self.commands, start=1):
