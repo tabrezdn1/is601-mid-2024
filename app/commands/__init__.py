@@ -28,3 +28,23 @@ class CommandHandler:
             return command_name
         except IndexError:
             return None
+
+class Singleton(type):
+    _instances = {}
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super().__call__(*args, **kwargs)
+        return cls._instances[cls]
+
+class CommandHistoryManager(metaclass=Singleton):
+    def __init__(self):
+        self.history = []
+
+    def add_command(self, command_name):
+        self.history.append(command_name)
+
+    def get_history(self):
+        return self.history
+
+    def clear_history(self):
+        self.history.clear()
