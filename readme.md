@@ -52,6 +52,9 @@ Please [View the document](docs/design_patterns.md) for additional details on ho
 ### Testing and Code Quality
 - Achieved 90% test coverage with Pytest.
 - Ensured the code quality and adherence to PEP 8 standards, verified by Pylint.
+##### code coverage results from the build logs.
+
+![alt text](images/code_coverage.png)
 
 ### Version Control Best Practices
 - Utilize logical commits that clearly group feature development and corresponding tests, evidencing clear development progression.
