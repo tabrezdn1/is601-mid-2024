@@ -3,6 +3,10 @@
 ## Project Overview
 This is an advanced Python-based calculator application. This application integrates clean, maintainable code, the application of design patterns, comprehensive logging, dynamic configuration via environment variables, sophisticated data handling with Pandas, and a command-line interface (REPL) for real-time user interaction.
 
+## Demo video:
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=1WKa4I2scbw
+" target="_blank"><img src="https://img.youtube.com/vi/1WKa4I2scbw/3.jpg" 
+alt="Demo video for calculator" width="240" height="180" border="3" /></a>
 ## Functionalities Implemented
 ### Running the app with `python main.py` command.
 
