@@ -3,14 +3,14 @@
 ## Command Pattern: 
 In a REPL (Read-Eval-Print Loop) application, the Command pattern is particularly useful for the following reasons:
 
-- Modularity: Each command is encapsulated in its own class, making the application's structure clean and organized.
+- Modularity: Each command is encapsulated in its class, making the application's structure clean and organized.
 - Extensibility: Adding new commands is straightforward and doesn't require altering existing code, facilitating easy updates and maintenance.
 - Undo Operations: Supports implementing undo functionality by keeping a history of executed commands, allowing users to easily revert actions.
 - Separation of Concerns: Decouples the input parsing and command execution, simplifying the main loop and enhancing code clarity.
-- Easier Testing: Commands can be tested in isolation, improving testability and reliability of the application.
-The Command pattern essentially helps in keeping REPL applications scalable, maintainable, and user-friendly.
+- Easier Testing: Commands can be tested in isolation, improving the testability and reliability of the application.
+The Command pattern essentially helps to keep REPL applications scalable, maintainable, and user-friendly.
 
-Sample code from project: 
+Sample code from the project: 
 ```
 class Command(ABC):
     @abstractmethod
@@ -51,7 +51,7 @@ The Singleton pattern ensures that a class has only one instance and provides a 
 - Resource Management: Ideal for managing resources or configurations that are shared across the system.
 - Consistency: Guarantees that stateful information is consistent since all code accesses a single instance.
 
-Sample code from porject:
+Sample code from the project:
 ```
 class Singleton(type):
     _instances = {}
@@ -102,7 +102,7 @@ The Factory Method pattern defines an interface for creating an object but lets 
 - Extensibility: Supports adding new types of products without changing the existing factory's code, enhancing extensibility.
 - Decoupling: Reduces the dependency between the application and concrete classes, promoting loose coupling.
 
-Sample code from project
+Sample code from the project
 ```
 self.command_handler.register_command("menu", MenuCommand(self.command_handler))
 
@@ -117,7 +117,7 @@ The Memento pattern captures and externalizes an object's internal state so that
 
 The functionality of CommandHistoryManager has a resemblance to the Memento pattern, which is used to capture and externalize an object's internal state so that the object can be restored to this state later.
 
-Sample code from project
+Sample code from the project
 ```
 class CommandHistoryManager(metaclass=Singleton):
     def __init__(self):
@@ -155,14 +155,14 @@ class CommandHistoryManager(metaclass=Singleton):
 
 ```
 
-## Stratergy Patten: 
-The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy allows the algorithm to vary independently from clients that use it. Its benefits are:
+## Strategy Pattern: 
+The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it. Its benefits are:
 
 - Flexibility: Clients can switch algorithms (strategies) at runtime, providing significant flexibility.
 - Isolation: Isolates the implementation details of algorithms from the code that uses them.
 - Extensibility: New strategies can be introduced without changing the context, making the application more extensible.
 
-CSV command could also have been implemented with Stratergy Pattern, but that would mean we have to manually register the command and would add conditions check to plugin architecture. Manually registering CSV command with Stratergy Patten would look something like this:
+CSV command could also have been implemented with Strategy Pattern, but that would mean we have to manually register the command and add conditions check to plugin architecture. Manually registering CSV command with Strategy Pattern would look something like this:
 
 ```
 sort_and_reduce_strategy = SortAndReduceStrategy(sort_by='Population', columns_to_keep=['State Abbreviation', 'State Name', 'Population'])
