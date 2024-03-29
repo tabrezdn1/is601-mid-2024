@@ -1,9 +1,9 @@
 # Sample screenshot of project phase4 working setup
 ![alt text](../images/phase4.png)
 
-This phase is the most important and complex phase throughout the project. It focuses on the development of an interactive command-line application that operates continuously, transitioning from a single-execution script to a fully functional application. This includes transforming the calculator program into an interactive application using the design patterns as per the requirement and REPL (Read, Evaluate, Print, Loop) principles. This phase introduces some design patterns like command pattern and factory method, along with that a new way to dynamically load commands using a simple plugin architecture.
+This phase is the most important and complex phase throughout the project. It focuses on the development of an interactive command-line application that operates continuously, transitioning from a single execution script to a fully functional application. This includes transforming the calculator program into an interactive application using the design patterns as per the requirement and REPL (Read, Evaluate, Print, Loop) principles. This phase introduces some design patterns like command pattern and factory methods, along with a new way to dynamically load commands using a simple plugin architecture.
 
-## Added features to project as part of this phase:
+## Added features to the project as part of this phase:
 1. **Functionality :**
   - Implementation of command pattern and REPL.
   - Interactive calculator commands (add, subtract, multiply, divide).
@@ -11,9 +11,9 @@ This phase is the most important and complex phase throughout the project. It fo
   - Interactive menu commands.
   - Successful plugin architecture integration for dynamic command loading.
 2. **Testing :**
-  - Added test cases for three new commands: menu, calculator and openai.
-  - Added test cases for dynamic plugin menu.
-  - Added test cases for sub menu logic like for calculator and openai - which again has one more menu to navigate. NOTE: 0 is opted as menu command to go back.
+  - Added test cases for three new commands: menu, calculator, and openai.
+  - Added test cases for the dynamic plugin menu.
+  - Added test cases for sub-menu logic like for calculator and openai - which again has one more menu to navigate. NOTE: 0 is opted as a menu command to go back.
 
 ## Testing Commands
 

@@ -1,14 +1,14 @@
 # Sample screenshot of project phase3 working setup
 ![alt text](../images/phase3.png)
 
-As in the above screenshot, I have showcased usage of generating multiple test records(100,000+) and also the usage of calculator app with input provided via terminal to main.py, which is serving as the entry point of the app.
+As in the above screenshot, I have showcased the usage of generating multiple test records(100,000+) and also the usage of the calculator app with input provided via terminal to main.py, which is serving as the entry point of the app.
 
-## Added features to project as part of this phase:
+## Added features to the project as part of this phase:
 1. Use of Faker library for the generation of fake data.
-- Add faker library to the calculator app and update the requirements.txt and test cases accordingly.
+- Add the faker library to the calculator app and update the requirements.txt and test cases accordingly.
 2. Using of command line to generate N number of records dynamically for faker.
-- Customize test cases with dynamic number of records for testing by adding new commandline to faker.
-3. Introduction of main.py which serves as the main entry point of the app and also can be used in terminal with custom user inputs.
+- Customize test cases with a dynamic number of records for testing by adding a new command line to Faker.
+3. Introduction of main.py which serves as the main entry point of the app and also can be used in the terminal with custom user inputs.
 - Usage via terminal for the given tests:
 - a, b, operation, expected result
 - "5", "3", 'add', "The result of 5 add 3 is equal to 8"

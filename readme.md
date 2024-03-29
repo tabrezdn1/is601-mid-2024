@@ -11,9 +11,9 @@ This is an advanced Python-based calculator application. This application integr
 For detail description of all the commands showcased above: Please [View the document](docs/commands.md)
 
 ### Command-Line Interface (REPL)
-Implemented a Read-Eval-Print Loop (REPL) to facilitate direct interaction with the calculator, history and openAI command.
-- Execution of arithmetic operations (Add, Subtract, Multiply, and Divide) are supported for calculator.
-- Management of calculation history (Load, Save, Clear, Delete) are supported on csv file.
+Implemented a Read-Eval-Print Loop (REPL) to facilitate direct interaction with the calculator, history, and openAI command.
+- Execution of arithmetic operations (Add, Subtract, Multiply, and Divide) is supported for the calculator.
+- Management of calculation history (Load, Save, Clear, Delete) is supported on csv file.
 - OpenAI plugin to integrate chat system with an AI agent. (BASE CODE completed, integrating AI agent still pending).
 - Access to extended functionalities through dynamically loaded plugins is added.
 
@@ -24,7 +24,7 @@ Created a flexible plugin system to allow seamless integration of new commands o
 
 ### Calculation History Management with Pandas
 Utilized Pandas to manage a robust calculation history, enabling users to:
-- Load, save, clear, and delete history records through the REPL interface on a csv file.
+- Load, save, clear, and delete history records through the REPL interface on a CSV file.
 
 ### Professional Logging Practices
 Established a comprehensive logging system to record:
@@ -41,9 +41,9 @@ Employ Pandas for:
 Incorporated key design patterns to address software design challenges. Below are the features and the incorporated design patterns implemented for them:
 - **Command Pattern:** Structure commands within the REPL for effective calculation and history management.
 - **Singleton Pattern:** The Singleton pattern ensures a class has only one instance and provides a global point of access to it. `CommandHistoryManager` class uses the Singleton pattern.
-- **Factory Method:** Menu command is using this design pattern to accept `commandHandler` instance to load all the registered plugins as commands for the app.
+- **Factory Method:** Menu command uses this design pattern to accept `commandHandler` instance to load all the registered plugins as commands for the app.
 - **Memento Pattern:** The functionality of `CommandHistoryManager` has a resemblance to the Memento pattern, which is used to capture and externalize an object's internal state so that the object can be restored to this state later.
-- **Stratergy Patten:** CSV command could also have been implemented with Stratergy Pattern, but that would mean we have to manually register the command and would add conditions check to plugin architecture.
+- **Stratergy Patten:** CSV command could also have been implemented with Stratergy Pattern, but that would mean we have to manually register the command and add conditions check to plugin architecture.
 
 Please [View the document](docs/design_patterns.md) for additional details on how each design pattern is implemented and what is the challenge that it covers.
 
@@ -57,10 +57,10 @@ Please [View the document](docs/design_patterns.md) for additional details on ho
 ![alt text](images/code_coverage.png)
 
 ### Version Control Best Practices
-- Utilize logical commits that clearly group feature development and corresponding tests, evidencing clear development progression.
+- Utilize logical commits that group feature development and corresponding tests, evidencing clear development progression.
 
 ### Comprehensive Documentation
-The entire development process is divided into phases and each phase has a descrete document to showcase the purpose and code changes and fueatures added or removed as part of that phase.
+The entire development process is divided into phases and each phase has a discrete document to showcase the purpose and code changes and features added or removed as part of that phase.
 
 - Phase 1: [View the document](docs/project_init.md)
 - Phase 2: [View the document](docs/project_phase2.md)

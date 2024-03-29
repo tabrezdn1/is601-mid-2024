@@ -1,9 +1,9 @@
-# Sample screenshot of project phase5 working setup
+# Sample screenshot of project phase 5 working setup
 ![alt text](../images/phase5.png)
 
 This phase focuses on getting our app ready for production by adding features incorporating DevOps, Cloud Computing, Environment Variables, Logging, and Continuous Integration
 
-## Added features to project as part of this phase:
+## Added features to the project as part of this phase:
 1. Add a GitHub action to the project.
 - GitHub Actions to run your tests on GitHub automatically. It is currently set to trigger for two branches: DevOps and master. 
 2. Add the .env file.
